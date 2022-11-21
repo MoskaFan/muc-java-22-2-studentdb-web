@@ -5,6 +5,7 @@ import Student from "./Student";
 import axios from "axios";
 import StudentList from "./StudentList";
 import './StudentApp.css'
+import AddStudent from "./AddStudent";
 
 
 
@@ -24,9 +25,11 @@ export default function StudentApp(){
             .catch(console.error)
     }
     function addNewStudent(newStudent:StudentType){
-        axios.post("/student"+)
-            .then((response)=>{
-                setStudentList(response.data)})
+        axios.post("/student", newStudent)
+            .then(savedStudent =>{
+                setStudentList((prevState)=>{
+                    return [...prevState, newStudent]
+                })})
             .catch(console.error)
     }
     function deleteThatStudent(deletedStudentId: string){
@@ -42,8 +45,8 @@ export default function StudentApp(){
     return (
         <section className={"todo-form"}>
             <h1>Students List</h1>
-            <StudentList students={studentList} addNewStudent={addNewStudent} deleteThatStudent={deleteThatStudent}/>
-
+            <StudentList students={studentList} deleteThatStudent={deleteThatStudent}/>
+            <AddStudent addNewStudent={addNewStudent} />
         </section>
     );
 

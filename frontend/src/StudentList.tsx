@@ -5,7 +5,8 @@ import Student from "./Student";
 
 type StudentListProps ={
     students: StudentType [],
-    deleteThatStudent(id: string): void
+    deleteThatStudent(id: string): void,
+
 }
 
 
