@@ -2,7 +2,6 @@ import {StudentType} from './StudentType';
 import './StudentApp.css';
 
 import React, {ChangeEvent, Component, useState} from 'react';
-import Student from "./Student";
 
 type AddStudentProps ={
 
@@ -22,7 +21,6 @@ export default function AddStudent(props: AddStudentProps){
 function addNewStudent(){
     const initialId = 0;
     const newStudent: StudentType= {
-
 
             name: newStudentName
     }
