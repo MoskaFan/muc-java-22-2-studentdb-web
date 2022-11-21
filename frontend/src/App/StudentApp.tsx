@@ -45,8 +45,9 @@ export default function StudentApp(){
     return (
         <section className={"todo-form"}>
             <h1>Students List</h1>
-            <StudentList students={studentList} deleteThatStudent={deleteThatStudent}/>
             <AddStudent addNewStudent={addNewStudent} />
+            <StudentList students={studentList} deleteThatStudent={deleteThatStudent}/>
+
         </section>
     );
 
