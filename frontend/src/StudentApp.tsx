@@ -28,7 +28,7 @@ export default function StudentApp(){
         axios.post("/student", newStudent)
             .then(savedStudent =>{
                 setStudentList((prevState)=>{
-                    return [...prevState, newStudent]
+                    return [...prevState, savedStudent.data]
                 })})
             .catch(console.error)
     }

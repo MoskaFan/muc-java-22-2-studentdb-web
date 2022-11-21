@@ -1,4 +1,5 @@
 import {StudentType} from './StudentType';
+import './StudentApp.css';
 
 import React, {ChangeEvent, Component, useState} from 'react';
 import Student from "./Student";
@@ -22,13 +23,13 @@ function addNewStudent(){
     const initialId = 0;
     const newStudent: StudentType= {
 
-            id: "String.valueOf(initialId+1)",
+
             name: newStudentName
     }
     props.addNewStudent(newStudent)
 }
     return (
-        <section>
+        <section className={"addTodo-input"}>
             New student:<input onChange={newStudentNameInput}/>
             <button onClick={addNewStudent}>Add</button>
 
