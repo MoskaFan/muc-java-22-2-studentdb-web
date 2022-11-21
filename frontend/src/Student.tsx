@@ -17,8 +17,9 @@ function deleteThatStudent(){
 
         return (
             <section className={"todo-description"}>
-                {props.student.name}<br />
                 {props.student.id}
+                {props.student.name}
+
                 <button onClick={deleteThatStudent}>Delete</button>
             </section>
         );
