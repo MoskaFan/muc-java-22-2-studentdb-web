@@ -15,7 +15,7 @@ export default function AddStudent(props: AddStudentProps){
     const [newStudentName, setNewStudentName]=useState<string>("");
 
     const newStudentNameInput = (event: ChangeEvent<HTMLInputElement>)=>{
-        setNewStudentName(newStudentName)
+        setNewStudentName(event.target.value)
     }
 
 function addNewStudent(){
@@ -28,7 +28,7 @@ function addNewStudent(){
 }
     return (
         <section className={"addTodo-input"}>
-            New student:<input onChange={newStudentNameInput}/>
+            New Student: <input onChange={newStudentNameInput}/>
             <button onClick={addNewStudent}>Add</button>
 
         </section>
