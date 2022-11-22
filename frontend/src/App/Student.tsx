@@ -12,6 +12,7 @@ type StudentProps ={
 export default function Student(props: StudentProps){
 
 function deleteThatStudent(){
+    //ich persönlich würde versuchen auf die Nutzung vom ! zum erzwingen von Typen versuchen zu vermeiden. Wenn du die Typen entsprechend definierst ist auch kein Problem
     props.deleteThatStudent(props.student.id!)
 }
 
