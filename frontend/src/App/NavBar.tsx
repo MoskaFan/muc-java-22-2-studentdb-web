@@ -10,7 +10,7 @@ export default function NavBar(){
                     <NavLink to={"/home"} > Startseite </NavLink>
                 </li>
                 <li>
-                    <NavLink to={"/students"} > Student App </NavLink>
+                    <NavLink to={"/students"} > StudentApp </NavLink>
                 </li>
 
             </ul>
