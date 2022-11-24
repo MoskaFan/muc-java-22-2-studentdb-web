@@ -19,6 +19,7 @@ export default function AddStudent(props: AddStudentProps){
     }
 
 function addNewStudent(){
+    //ungenutzenCode entfernen
     const initialId = 0;
     const newStudent: StudentType= {
 

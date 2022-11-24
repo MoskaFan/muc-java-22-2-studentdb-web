@@ -6,7 +6,7 @@ type UseStudentProps = [StudentType[], (newStudent: StudentType) => void, (id: s
 
 
 
-
+//hooks schreiben wir typischerweiße am Anfang klein
 export default function UseStudents(): UseStudentProps {
 
 
